@@ -1,0 +1,11 @@
+TODOs
+
+[ ] Setup basic config
+[ ] Create mobile prototype
+[ ] Integrate endpoint
+[ ] Create desktop prototype
+[ ] Flesh out styling
+
+[ ] Review accessibility
+[ ] Review basic security
+[ ] Review performance
