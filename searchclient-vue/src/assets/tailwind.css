@@ -1,0 +1,12 @@
+@tailwind base;
+
+@tailwind components;
+
+@tailwind utilities;
+
+.r-btn-orange {
+  @apply bg-orange-500 text-white font-bold py-2 px-4 rounded;
+}
+.r-btn-orange:hover {
+  @apply bg-orange-700;
+}
