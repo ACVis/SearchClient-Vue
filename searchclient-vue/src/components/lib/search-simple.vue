@@ -25,7 +25,7 @@
 <script>
 const cssClasses = "";
 const defaultInputClasses =
-  "flex-1 appearance-none bg-gray-200 text-gray-700 border border-gray-200 rounded-l-lg py-3 px-4 leading-tight focus:outline-none focus:bg-white focus:border-gray-500";
+  "flex-1 appearance-none bg-gray-200 text-gray-700 border border-gray-200 rounded-l-lg py-3 px-4 leading-tight focus:outline-none focus:bg-white focus:border-orange-500";
 const defaultButtonClasses =
   "flex-initial bg-orange-500 hover:bg-orange-700 text-white font-bold tracking-wide py-2 px-4 rounded-r-lg";
 const defaultFormClasses = "w-full flex flex-no-wrap items-stretch relative";

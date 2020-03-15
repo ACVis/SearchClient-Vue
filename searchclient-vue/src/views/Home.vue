@@ -1,8 +1,8 @@
 <template>
-  <div class="container mx-auto p-4 bg-blue-100">
+  <div class="container mx-auto h-screen p-4">
     <!-- <img alt="Vue logo" src="../assets/logo.png" /> -->
     <!-- <HelloWorld msg="Welcome to Your Vue.js App" /> -->
-    <h1 class="font-lg">Search Reason Records</h1>
+    <h1 class="text-4xl mb-5">Search Reason Records</h1>
     <SearchSimple
       class="w-full mb-5"
       v-model.trim="searchInput"
@@ -27,10 +27,10 @@ const api = axios.create({
   baseURL: "http://localhost:8080/production",
   headers: {
     // "access-control-allow-origin": "*",
-    'Access-Control-Allow-Origin': '*',
-    "content-type": "application/json",
+    "Access-Control-Allow-Origin": "*",
+    "content-type": "application/json"
   }
-}); 
+});
 
 export default {
   name: "Home",
@@ -50,7 +50,7 @@ export default {
       submitState: {
         updating: false
       },
-      records: null,
+      records: null
     };
   },
   methods: {
@@ -61,10 +61,13 @@ export default {
 
       // return api.get(`q?=${search}&take=${take}&skip=${skip}`).then(response => {
       // return api.get(`q?=${search}`).then(response => {
-      return axios.get(`/production/?q=${search}`).then(response => {
-        this.records = response.data.hits;
-        return response;
-      }).catch(error => console.log(error));
+      return axios
+        .get(`/production/?q=${search}`)
+        .then(response => {
+          this.records = response.data.hits;
+          return response;
+        })
+        .catch(error => console.log(error));
     }
   }
 };
