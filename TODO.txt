@@ -1,6 +1,6 @@
 TODOs
 
-[ ] Setup basic config
+[x] Setup basic config
 [ ] Create mobile prototype
 [ ] Integrate endpoint
 [ ] Create desktop prototype
