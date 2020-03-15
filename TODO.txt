@@ -2,7 +2,10 @@ TODOs
 
 [x] Setup basic config
 [ ] Create mobile prototype
-[ ] Integrate endpoint
+[-] Integrate endpoint
+    [x] List results
+    [] Add pagination
+    [] Add sort
 [ ] Create desktop prototype
 [ ] Flesh out styling
 

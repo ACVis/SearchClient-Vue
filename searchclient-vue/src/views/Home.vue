@@ -2,8 +2,9 @@
   <div class="container mx-auto p-4 bg-blue-100">
     <!-- <img alt="Vue logo" src="../assets/logo.png" /> -->
     <!-- <HelloWorld msg="Welcome to Your Vue.js App" /> -->
+    <h1 class="font-lg">Search Reason Records</h1>
     <SearchSimple
-      class="w-full"
+      class="w-full mb-5"
       v-model.trim="searchInput"
       :updating="submitState.updating"
       :placeholder="'Search for records'"
@@ -29,7 +30,7 @@ const api = axios.create({
     'Access-Control-Allow-Origin': '*',
     "content-type": "application/json",
   }
-});
+}); 
 
 export default {
   name: "Home",
