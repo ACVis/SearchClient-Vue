@@ -1,6 +1,6 @@
-# SearchClient-Vue
+# Reason Search Client
 
-Description  
+### Description  
 
 Reason uses AWS’s search provider, Cloudsearch, to index and retrieve records from our site.
 In this exercise, please build a JavaScript client (app, component, or single page) to query our
