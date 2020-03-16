@@ -6,22 +6,21 @@
         Sort
         <select-simple
           name="sort"
-          v-model="sortType"          
+          v-model="sortType"
           :options="sortOptions"
           :disabled="submitState.updating || skip >= take"
         />
       </label>
-    <div class="flex-1">
-
-    <SearchSimple
-      class="w-full "
-      v-model.trim="searchInput"
-      :updating="submitState.updating"
-      :placeholder="'Search for records'"
-      :disabled="submitState.updating"
-      @search="getRecords({search: searchInput})"
-    />
-</div>
+      <div class="flex-1">
+        <SearchSimple
+          class="w-full "
+          v-model.trim="searchInput"
+          :updating="submitState.updating"
+          :placeholder="'Search for records'"
+          :disabled="submitState.updating"
+          @search="getRecords({ search: searchInput })"
+        />
+      </div>
     </div>
     <records-list :records="records" />
     <pagination
@@ -43,7 +42,7 @@ import SelectSimple from "@/components/lib/select-simple.vue";
 import RecordsList from "@/components/lib/records-list.vue";
 import Pagination from "@/components/lib/pagination.vue";
 import axios from "axios";
-import { isEmpty, get } from "lodash-es"
+import { isEmpty, get } from "lodash-es";
 
 const api = axios.create({
   // baseURL: "https://kvkbud4a7i.execute-api.us-west-2.amazonaws.com/production",
@@ -58,7 +57,7 @@ const api = axios.create({
 const sortOptions = [
   { text: "Default", value: "", disabled: false },
   { text: "Date - Desc", value: "&sort=post_date+desc", disabled: false },
-  { text: "Date - Asc", value: "&sort=post_date+asc", disabled: false },
+  { text: "Date - Asc", value: "&sort=post_date+asc", disabled: false }
 ];
 
 export default {
@@ -90,21 +89,23 @@ export default {
   },
   computed: {
     recordsFound() {
-      return !isEmpty(this.records) && this.records.found ? this.records.found : 0;
+      return !isEmpty(this.records) && this.records.found
+        ? this.records.found
+        : 0;
     },
     pages() {
       return Math.ceil(this.recordsFound / this.take);
     },
     currentPage() {
-      const page = Math.max(1, (this.skip / this.take) + 1 );
+      const page = Math.max(1, this.skip / this.take + 1);
       return page;
     }
   },
   methods: {
     isEmpty,
     onPageChange(input) {
-      this.skip = Math.max(0, (this.take * input) - 10);
-      this.getRecords({search: this.lastSearch});
+      this.skip = Math.max(0, this.take * input - 10);
+      this.getRecords({ search: this.lastSearch });
     },
     getRecords(params) {
       const search = params?.search;
@@ -114,7 +115,16 @@ export default {
       // const skip = params?.skip;\
 
       //template literals mess with sourcemap, so we'll do regular concatanation
-      const url = "/production/?q=" + search + "&size=" + this.take + "&start=" + this.skip + this.sortType;
+      const baseUrl = "https://kvkbud4a7i.execute-api.us-west-2.amazonaws.com";
+      const url =
+        baseUrl +
+        "/production/?q=" +
+        search +
+        "&size=" +
+        this.take +
+        "&start=" +
+        this.skip +
+        this.sortType;
       return axios
         .get(url)
         .then(response => {
@@ -124,11 +134,11 @@ export default {
           this.records = hits;
 
           //If new search, reset the skip
-          if(search !== this.lastSearch) {
+          if (search !== this.lastSearch) {
             this.skip = 0;
           }
           //if no results, reset search form
-          if(hits === null) {
+          if (hits === null) {
             this.skip = 0;
             this.lastSearch = "";
             this.searchInput = "";
