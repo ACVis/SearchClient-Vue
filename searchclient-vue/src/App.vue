@@ -2,7 +2,7 @@
   <div id="app" class="w-full h-screen flex flex-col">
     <nav class="bg-gray-900" id="nav">
       <div class="container mx-auto px-4 py-3 flex justify-between items-end">
-        <a class="r-text-orange-brand leading-none text-2xl lg:text-4xl" href="#">reason</a>
+        <a class="r-text-orange-brand hover:text-orange-400 leading-none text-2xl lg:text-4xl transition-colors duration-700 ease-in-out" href="https://reason.com/" target="__blank">reason</a>
         <div class="block lg:hidden">
           <button
             class="flex items-center px-3 py-2 border rounded text-gray-500 border-gray-600 hover:text-gray-800 hover:border-teal-500 appearance-none focus:outline-none"
@@ -21,14 +21,15 @@
           <ul class="inline-flex">
             <!-- <router-link to="/">Home</router-link> | -->
             <li>
-              <a class="px-4 font-bold" href="/">Home</a>
+              <!-- <a class="px-4 font-bold" href="/">Home</a> -->
+              <router-link class="px-4 hover:text-gray-300" to="home">Home</router-link>
             </li>
-            <li>
-              <a class="px-4 hover:text-gray-800" href="#">About</a>
+             <li>
+              <router-link class="px-4 hover:text-gray-300" to="about">About</router-link>
             </li>
-            <li>
-              <a class="px-4 hover:text-gray-800" href="#">Contact</a>
-            </li>
+            <!-- <li>
+              <a class="px-4 hover:text-gray-300" href="#">Contact</a>
+            </li>  -->
           </ul>
         </div>
       </div>
@@ -72,7 +73,7 @@
     // color: #2c3e50;
 
     &.router-link-exact-active {
-      color: #42b983;
+      // color: #42b983;
     }
   }
 }

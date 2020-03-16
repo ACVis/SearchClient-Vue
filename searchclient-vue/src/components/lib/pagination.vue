@@ -40,7 +40,7 @@
         aria-label="Go to next page"
       >Next</button>
     </li>
-
+<!-- disable for now -->
     <li class="pagination-item ml-3">
       <button
         type="button"

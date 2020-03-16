@@ -20,7 +20,7 @@
           @mouseenter="titlehover = true"
           @mouseleave="titlehover = false"
         >
-          {{record.fields.post_title}}
+          {{truncate(record.fields.post_title, 110)}}
           <i
             :class="{ 'opacity-100': titlehover }"
             class="fa fa-link opacity-0 transition-opacity ease-in duration-300"
@@ -34,8 +34,8 @@
           <span class="text-grey text-xs">{{record.fields.post_date | toPostDate}}</span>
         </div>
         <div
-          class="pl-3 pr-3 pb-2 bg-grey-lighter border-b border-gray-400 flex-1 text-grey-darkest text-sm"
-        >{{truncate(record.fields.post_content, 300)}}</div>
+          class="w-full pl-3 pr-3 pb-2 bg-grey-lighter border-b border-gray-400 flex-1 text-grey-darkest text-sm"
+        >{{truncate(record.fields.post_content, 150)}}</div>
       </div>
     </div>
   </li>

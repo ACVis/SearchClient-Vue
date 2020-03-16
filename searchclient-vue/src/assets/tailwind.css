@@ -4,6 +4,20 @@
 
 @tailwind utilities;
 
+#nav a.router-link-exact-active {
+  /* color: #42b983; */
+  @apply font-bold text-blue-300;
+}
+  
+.align-left {
+  text-align: left;
+}
+
+.select-simple:disabled {
+  @apply text-gray-400;
+  pointer-events: none;
+}
+
 .r-btn-orange {
   @apply bg-orange-500 text-white font-bold py-2 px-4 rounded;
 }
