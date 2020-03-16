@@ -3,6 +3,7 @@
 [x] Setup basic config
 [x] Create desktop prototype
 [ ] Create mobile prototype
+    [ ] Would put images on top of results, so they read vertically and dont squish.
 [x] Integrate endpoint
     [x] List results
     [x] Add pagination
