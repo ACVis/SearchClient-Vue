@@ -1,6 +1,6 @@
 # Reason Search Client
 ### Get Started
-Clone or download and extract project. Open a terminal inside the *searchclient-vue* directory.  Then run in the terminal: `npm run serve`. Open <http://localhost:8080/> in your browser. The site has only been tested in Chrome for desktop. Make sure you have the latest versions of node and npm installed. 
+Clone or download and extract project. Open a terminal inside the *searchclient-vue* directory. Run in the terminal: `npm install`. Then run in the terminal: `npm run serve`. Open <http://localhost:8080/> in your browser. The site has only been tested in Chrome for desktop. Make sure you have the latest versions of node and npm installed. 
 
 ### Description  
 
