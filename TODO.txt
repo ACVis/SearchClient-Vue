@@ -4,11 +4,27 @@ TODOs
 [ ] Create mobile prototype
 [-] Integrate endpoint
     [x] List results
-    [] Add pagination
-    [] Add sort
+    [x] Add pagination
 [ ] Create desktop prototype
-[ ] Flesh out styling
+[x] Flesh out styling
 
 [ ] Review accessibility
 [ ] Review basic security
 [ ] Review performance
+
+Stretch Goals
+
+[ ] Add sort
+[ ] Highlight search term(s) in results
+[ ] Clear/Refresh button
+[ ] Click on Excerpt and have it unfold into bigger excerpt. Maybe scrollable?
+[ ] Add first-search transition
+
+Things I like
+
+The simple styling. It's clean.
+
+Things I Would Improve
+
+Not sure I'm sold on the way I left aligned the results with the images. A "No Image" placeholder may have been better.
+
