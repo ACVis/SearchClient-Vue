@@ -1,7 +1,7 @@
 <template>
-  <div id="app" class="w-full h-screen">
+  <div id="app" class="w-full h-screen flex flex-col">
     <nav class="bg-gray-900" id="nav">
-      <div class="container mx-auto px-6 py-3 flex justify-between items-end">
+      <div class="container mx-auto px-4 py-3 flex justify-between items-end">
         <a class="r-text-orange-brand leading-none text-2xl lg:text-4xl" href="#">reason</a>
         <div class="block lg:hidden">
           <button
@@ -45,6 +45,9 @@
 :root {
   --rblack: hsl(0, 0%, 10%);
   --rorange: hsl(18, 89%, 58%);
+  --rorange-darker10: hsl(18, 89%, 48%);
+  --rorange-darker20: hsl(18, 89%, 38%);
+  --rorange-disabled: hsl(18, 5%, 78%);
   --rgrey88: hsl(0, 0%, 88%);
   --regrey63: hsl(0, 0%, 63%);
 }

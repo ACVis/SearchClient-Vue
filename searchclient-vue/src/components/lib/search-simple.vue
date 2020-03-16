@@ -12,7 +12,7 @@
     <button :disabled="updating || disabled" :class="_btnClass" type="submit">
       <slot name="spinner">
         <template v-if="updating">
-          <i class="fa fa-spinner fa-pulse fa-fw"></i>
+          <i class="mx-4 fa fa-spinner fa-pulse fa-fw"></i>
           <span class="sr-only">Loading...</span>
         </template>
         <template v-else>Search</template>
@@ -25,9 +25,9 @@
 <script>
 const cssClasses = "";
 const defaultInputClasses =
-  "flex-1 appearance-none bg-gray-200 text-gray-700 border border-gray-200 rounded-l-lg py-3 px-4 leading-tight focus:outline-none focus:bg-white focus:border-orange-500";
+  "shadow-sm flex-1 appearance-none bg-gray-200 text-gray-700 border border-gray-200 rounded-l-lg py-3 px-4 leading-tight focus:outline-none focus:bg-white focus:border-orange-500";
 const defaultButtonClasses =
-  "flex-initial bg-orange-500 hover:bg-orange-700 text-white font-bold tracking-wide py-2 px-4 rounded-r-lg";
+  "shadow-sm flex-initial bg-orange-500 hover:bg-orange-700 text-white font-bold tracking-wide py-2 px-4 rounded-r-lg";
 const defaultFormClasses = "w-full flex flex-no-wrap items-stretch relative";
 
 export default {

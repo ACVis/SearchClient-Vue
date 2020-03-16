@@ -1,38 +1,26 @@
 <template>
   <div>
     <ul v-if="records && records.hit">
-      <li
-        class="record-box border border-l-2 border-t-0 border-b-0 mb-3"
-        :key="record.id"
+      <record
+        class="mb-3"
         v-for="record in records.hit"
-      >
-        <div class="flex items-start mb-4 text-sm">
-          <img :src="record.fields.image_url" class="w-40 h-auto mr-3" />
-          <div class="flex-1 text-left overflow-auto">
-            <div class>
-              <span class="font-bold">{{record.fields.post_title}}</span>
-            </div>
-            <div class>
-              <span class="text-grey text-xs">{{record.fields.author_names}} |</span>
-              <span class>{{record.fields.post_date | toPostDate}}</span>
-            </div>
-            <p class="text-black leading-normal">{{record.fields.subtitle}}</p>
-            <div
-              class="bg-grey-lighter border-b-2 border-grey-light text-grey-darkest text-sm font-mono p-3 mt-2 whitespace-pre overflow-auto"
-            >{{record.fields.post_excerpt}}</div>
-          </div>
-        </div>
-      </li>
+        :record="record"
+        :key="record.id"
+      ></record>
     </ul>
   </div>
 </template>
 
 <script>
 import dayjs from "dayjs";
+import Record from "@/components/lib/record.vue";
 const defaultWrapClasses = "";
 
 export default {
   name: "RecordsList",
+  components: {
+    Record
+  },
   filters: {
     toPostDate(inputdate) {
       if (inputdate) {
@@ -73,6 +61,18 @@ export default {
   },
   mounted() {},
   methods: {
+    truncate(string, limit = 50, postfix = "...") {
+      let output = string;
+
+      if (typeof output != "undefined" && output != "") {
+        if (output.length > limit) {
+          output = output.slice(0, limit) + postfix;
+        }
+        return output;
+      } else {
+        return string;
+      }
+    }
     // dayjs,
     //   search() {
     //     this.$emit("search", this.value, {

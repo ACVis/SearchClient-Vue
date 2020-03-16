@@ -10,3 +10,19 @@
 .r-btn-orange:hover {
   @apply bg-orange-700;
 }
+
+.r-btn-page {
+  @apply py-1 px-3 border border-gray-400 text-white font-medium;
+  background: var(--rorange);
+}
+.r-btn-page:disabled {
+
+  background: var(--rorange-disabled);
+  pointer-events: none;
+}
+.r-btn-page:disabled:hover {
+  background: var(--rorange-disabled);
+}
+.r-btn-page:hover {
+  background: var(--rorange-darker20);
+}
