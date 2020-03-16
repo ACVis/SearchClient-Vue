@@ -5,7 +5,6 @@
 @tailwind utilities;
 
 #nav a.router-link-exact-active {
-  /* color: #42b983; */
   @apply font-bold text-blue-300;
 }
   

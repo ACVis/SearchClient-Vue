@@ -46,4 +46,5 @@ differently or do more work on the css and structure.
 -There's a lot of things I could do to make the project more developer friendly. 
     - Normally, I extract more things into utilities and common functionality and then centralize, organize, and reuse. 
     I did that some, but not as much as I'd like.
-    - The css is obviously made quickly, to just work.
+    - The css is made quickly, to just work. It's not as systematic and organized as I would like.
+    However, I do think it is appropriate to the project length and scope.
